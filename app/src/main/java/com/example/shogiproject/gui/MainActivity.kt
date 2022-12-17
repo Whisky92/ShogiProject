@@ -1,23 +1,23 @@
 package com.example.shogiproject.gui
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
+import android.widget.Button
 import com.example.shogiproject.R
-import com.example.shogiproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
 
+        var btnPiece = findViewById<Button>(R.id.piece_button)
+        btnPiece.setOnClickListener {
+            val intent = Intent(this, PieceActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
 
 }
