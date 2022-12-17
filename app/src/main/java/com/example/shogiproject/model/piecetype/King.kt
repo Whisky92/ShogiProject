@@ -38,7 +38,7 @@ class King : PieceType {
         isEvolved = false
     }
 
-    override fun showSteps(piece: Piece): ArrayList<Position> {
+    override fun showSteps(piece: Piece, direction: Int): ArrayList<Position> {
         val possibleSteps: ArrayList<Position> = ArrayList()
         val pos: Position = board.getPositionByCoords(piece.getX(), piece.getY())
         val currentX: Int = pos.getX()

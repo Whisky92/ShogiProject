@@ -39,19 +39,17 @@ class Lance : PieceType {
         isEvolved = false
     }
 
-    override fun showSteps(piece: Piece): ArrayList<Position> {
+    override fun showSteps(piece: Piece, direction: Int): ArrayList<Position> {
         if (!isEvolved) {
             val possibleSteps: ArrayList<Position> = ArrayList()
-            val direction: Direction = if (board.getPlayer1().getColor() == piece.getColor())
-                board.getPlayer1().getDirection() else board.getPlayer2().getDirection()
-            if (direction == Direction.BOTTOM) {
+            if (direction == 1) {
                 possibleSteps.addAll(getTopSteps(piece))
             } else {
                 possibleSteps.addAll(getBottomSteps(piece))
             }
             return possibleSteps
         } else {
-            return goldSteps.showSteps(piece)
+            return goldSteps.showSteps(piece, direction)
         }
     }
 

@@ -37,15 +37,12 @@ class Silver : PieceType {
         isEvolved = false
     }
 
-    override fun showSteps(piece: Piece): ArrayList<Position> {
+    override fun showSteps(piece: Piece, direction: Int): ArrayList<Position> {
         if (!isEvolved) {
             val possibleSteps: ArrayList<Position> = ArrayList()
             val pos: Position = board.getPositionByCoords(piece.getX(), piece.getY())
             val currentX: Int = pos.getX()
             val currentY: Int = pos.getY()
-            val direction: Int = if (board.getPlayer1().getColor() == piece.getColor())
-                board.getPlayer1().getDirection().getValueOfDirection()
-            else board.getPlayer2().getDirection().getValueOfDirection()
             possibleSteps.addAll(goldSteps.checkCell(currentX + 1 * direction, currentY, piece))
             possibleSteps.addAll(goldSteps.checkCell(currentX + 1 * direction, currentY + 1, piece))
             possibleSteps.addAll(goldSteps.checkCell(currentX + 1 * direction, currentY - 1, piece))
@@ -53,7 +50,7 @@ class Silver : PieceType {
             possibleSteps.addAll(goldSteps.checkCell(currentX - 1 * direction, currentY - 1, piece))
             return possibleSteps
         } else {
-            return goldSteps.showSteps(piece)
+            return goldSteps.showSteps(piece, direction)
         }
     }
 }

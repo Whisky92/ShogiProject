@@ -17,6 +17,6 @@ interface PieceType {
 
     fun getIsEvolved(): Boolean
 
-    fun showSteps(piece: Piece) : ArrayList<Position>
+    fun showSteps(piece: Piece, direction: Int) : ArrayList<Position>
 
 }

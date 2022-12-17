@@ -38,7 +38,7 @@ class Gold : PieceType {
         isEvolved = false
     }
 
-    override fun showSteps(piece: Piece): ArrayList<Position> {
-        return goldSteps.showSteps(piece)
+    override fun showSteps(piece: Piece, direction: Int): ArrayList<Position> {
+        return goldSteps.showSteps(piece, direction)
     }
 }

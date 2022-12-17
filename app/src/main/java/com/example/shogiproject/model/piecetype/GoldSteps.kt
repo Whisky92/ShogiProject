@@ -3,6 +3,7 @@ package com.example.shogiproject.model.piecetype
 import com.example.shogiproject.model.mainparts.Board
 import com.example.shogiproject.model.mainparts.Piece
 import com.example.shogiproject.model.mainparts.Position
+import com.example.shogiproject.model.types.Direction
 
 class GoldSteps {
 
@@ -20,14 +21,11 @@ class GoldSteps {
 
     private val board: Board = Board.getInstance()
 
-    fun showSteps(piece: Piece): ArrayList<Position> {
+    fun showSteps(piece: Piece, direction: Int): ArrayList<Position> {
         val possibleSteps: ArrayList<Position> = ArrayList()
         val pos: Position = board.getPositionByCoords(piece.getX(), piece.getY())
         val currentX: Int = pos.getX()
         val currentY: Int = pos.getY()
-        val direction: Int = if (board.getPlayer1().getColor() == piece.getColor())
-            board.getPlayer1().getDirection().getValueOfDirection()
-            else board.getPlayer2().getDirection().getValueOfDirection()
         possibleSteps.addAll(checkCell(currentX + 1 * direction, currentY, piece))
         possibleSteps.addAll(checkCell(currentX + 1 * direction, currentY + 1, piece))
         possibleSteps.addAll(checkCell(currentX + 1 * direction, currentY - 1, piece))

@@ -38,7 +38,7 @@ class Rook : PieceType {
         isEvolved = false
     }
 
-    override fun showSteps(piece: Piece): ArrayList<Position> {
+    override fun showSteps(piece: Piece, direction: Int): ArrayList<Position> {
         val possibleSteps: ArrayList<Position> = ArrayList()
         possibleSteps.addAll(getTopSteps(piece))
         possibleSteps.addAll(getBottomSteps(piece))
