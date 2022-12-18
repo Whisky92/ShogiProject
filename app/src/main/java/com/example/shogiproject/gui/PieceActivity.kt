@@ -3,36 +3,36 @@ package com.example.shogiproject.gui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.commit
 import com.example.shogiproject.R
 import com.example.shogiproject.databinding.ActivityMainBinding
+import com.example.shogiproject.databinding.ActivityPieceBinding
 
 class PieceActivity : AppCompatActivity() {
 
-  //  lateinit var binding: ActivityMainBinding
+    lateinit var binding: ActivityPieceBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-      //  binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_piece)
+        binding = ActivityPieceBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-     /*   val btnBasic = findViewById<Button>(R.id.btn_basic_form)
-        btnBasic.setOnClickListener {
-            val fragmentManager = supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentContainerView,BasicFormFragment())
-            fragmentTransaction.commit()
-
+        binding.btnBasicForm.setOnClickListener {
+            replaceFragment(BasicFormFragment())
         }
 
-        val btnEvolved = findViewById<Button>(R.id.btn_evolved_form)
-        btnEvolved.setOnClickListener {
-            val fragmentManager = supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.replace(R.id.fragmentContainerView,EvolvedFormFragment())
-            fragmentTransaction.commit()
+        binding.btnEvolvedForm.setOnClickListener {
+            replaceFragment(EvolvedFormFragment())
+        }
 
-        } */
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.fragmentContainerView, fragment)
+        fragmentTransaction.commit()
     }
 }
