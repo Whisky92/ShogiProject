@@ -31,6 +31,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnDatas = findViewById<Button>(R.id.btn_data_bind)
+        btnDatas.setOnClickListener {
+            val intent = Intent(this, DataBindActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

@@ -1,12 +1,15 @@
 package com.example.rockpaperscissors.model
 
+import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.shogiproject.databinding.FragmentRpsGameBinding
 import java.util.concurrent.ThreadLocalRandom
 
 class RockPaperScissors(drawNumber: Int) : ViewModel() {
+
 
     private var _playerWins: MutableLiveData<Int> = MutableLiveData<Int>()
     val playerWins: LiveData<Int>
@@ -52,7 +55,7 @@ class RockPaperScissors(drawNumber: Int) : ViewModel() {
     fun newTurn() {
         _playerWins.value = 0
         _botWins.value = 0
-        _draws.value = 0
+        _draws.value = 5
     }
 
 }
