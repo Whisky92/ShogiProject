@@ -25,6 +25,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnRps = findViewById<Button>(R.id.rock_paper_scissors_button)
+        btnRps.setOnClickListener {
+            val intent = Intent(this, RpsActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

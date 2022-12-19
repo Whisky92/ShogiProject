@@ -11,4 +11,6 @@
     <color name="light_brown">#C4A484</color>
     <color name="yellow">#FFFF00</color>
     <color name="light_orange">#FFD580</color>
+    <color name="green">#008631</color>
+    <color name="light_blue">#ADD8E6</color>
 </resources>

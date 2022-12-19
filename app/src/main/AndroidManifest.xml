@@ -15,6 +15,13 @@
         android:theme="@style/Theme.ShogiProject"
         tools:targetApi="31">
         <activity
+            android:name=".gui.RpsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".gui.GameActivity"
             android:exported="false">
             <meta-data
