@@ -37,6 +37,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnWebData = findViewById<Button>(R.id.web_data)
+        btnWebData.setOnClickListener {
+            val intent = Intent(this, WebDataActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

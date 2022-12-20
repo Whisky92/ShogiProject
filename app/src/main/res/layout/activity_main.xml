@@ -79,14 +79,14 @@
         app:layout_constraintVertical_bias="0.371" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/results"
+        android:id="@+id/web_data"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="24dp"
         android:background="@color/light_brown"
-        android:text="Results"
+        android:text="Web Data"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
