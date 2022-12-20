@@ -43,6 +43,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnRecycler2 = findViewById<Button>(R.id.btn_recycler_2)
+        btnRecycler2.setOnClickListener {
+            val intent = Intent(this, RecyclerView2::class.java)
+            startActivity(intent)
+        }
+
     }
 
 }

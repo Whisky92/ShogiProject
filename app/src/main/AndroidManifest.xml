@@ -37,6 +37,20 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".gui.RecyclerView2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".gui.RecyclerView3"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".gui.GameActivity"
             android:exported="false">
             <meta-data
